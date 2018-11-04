@@ -25,3 +25,9 @@
 # Ignore database secrets
 /config/database.yml
 /config/cable.yml
+
+# Ignore test coverage info
+/coverage/*
+
+# Ignore spec files
+/spec/examples.txt
