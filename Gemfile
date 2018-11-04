@@ -23,6 +23,10 @@ gem 'graphql'
 gem 'bcrypt'
 gem 'jwt'
 
+# File uploader
+gem 'apollo_upload_server', '2.0.0.beta.1'
+gem 'carrierwave'
+
 group :development, :test do
   gem 'awesome_print'
   gem 'factory_bot_rails'

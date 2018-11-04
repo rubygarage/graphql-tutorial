@@ -13,6 +13,16 @@ RSpec.describe GraphqlsController, type: :controller do
             projects {
               id
               title
+              tasks {
+                id
+                name
+                done
+                comments {
+                  id
+                  body
+                  attachmentUrl
+                }
+              }
             }
           }
         }

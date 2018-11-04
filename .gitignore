@@ -31,3 +31,6 @@
 
 # Ignore spec files
 /spec/examples.txt
+
+# Ignore Carrierwave uploads
+/public/uploads

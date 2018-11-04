@@ -25,6 +25,17 @@ module CurrentUserSchema
         required(:projects).each do
           required(:id).filled(:str?)
           required(:title).filled(:str?)
+          required(:tasks).each do
+            required(:id).filled(:str?)
+            required(:name).filled(:str?)
+            required(:done).filled(:bool?)
+            required(:deadline).filled(:str?)
+            required(:comments).each do
+              required(:id).filled(:str?)
+              required(:body).filled(:str?)
+              required(:attachmentUrl).maybe(:str?)
+            end
+          end
         end
       end
     end

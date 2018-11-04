@@ -10,4 +10,7 @@ class MutationType < Lib::Objects::Base
   field :createTask, mutation: Tasks::Mutations::Create
   field :updateTask, mutation: Tasks::Mutations::Update
   field :destroyTask, mutation: Tasks::Mutations::Destroy
+
+  field :createComment, mutation: Comments::Mutations::Create
+  field :destroyComment, mutation: Comments::Mutations::Destroy
 end
