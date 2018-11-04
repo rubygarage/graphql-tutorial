@@ -1,4 +1,4 @@
-class GraphqlsController < ApplicationController
+class GraphqlsController < AuthenticationController
   def create
     run Graphql::Execute
     render json: @model

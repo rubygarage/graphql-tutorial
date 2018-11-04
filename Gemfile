@@ -21,6 +21,7 @@ gem 'graphql'
 
 # Authentification
 gem 'bcrypt'
+gem 'jwt'
 
 group :development, :test do
   gem 'awesome_print'

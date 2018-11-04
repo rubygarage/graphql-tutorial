@@ -152,6 +152,7 @@ GEM
     inflecto (0.0.2)
     jaro_winkler (1.5.1)
     json (2.1.0)
+    jwt (2.1.0)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -394,6 +395,7 @@ DEPENDENCIES
   ffaker
   graphiql-rails
   graphql
+  jwt
   listen
   pg
   pronto

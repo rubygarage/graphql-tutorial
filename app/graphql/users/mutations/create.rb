@@ -1,4 +1,4 @@
-class Users::Mutations::Create < GraphQL::Schema::RelayClassicMutation
+class Users::Mutations::Create < Lib::Mutations::Base
   graphql_name 'createUser'
   description 'Create new user (Sign Up)'
 
@@ -10,7 +10,7 @@ class Users::Mutations::Create < GraphQL::Schema::RelayClassicMutation
   field :errors, [Objects::Error], null: false
 
   def resolve(**args)
-    result = Users::Create.call(params: args)
+    result = run Users::Create, args
 
     if result.success?
       { user: result[:model], errors: [] }

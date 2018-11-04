@@ -1,10 +1,10 @@
 module Users::Resolvers
-  class Index < GraphQL::Schema::Resolver
+  class Index < Lib::Resolvers::Base
     type [::Objects::User], null: false
 
     def resolve
-      result = Users::Index.call
-      result[:model]
+      run Users::Index
+      @model
     end
   end
 end

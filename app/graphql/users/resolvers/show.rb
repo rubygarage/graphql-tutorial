@@ -1,12 +1,12 @@
 module Users::Resolvers
-  class Show < GraphQL::Schema::Resolver
+  class Show < Lib::Resolvers::Base
     type ::Objects::User, null: true
 
     argument :id, ID, required: true
 
     def resolve(**args)
-      result = Users::Show.call(params: args)
-      result[:model]
+      run Users::Show, args
+      @model
     end
   end
 end
