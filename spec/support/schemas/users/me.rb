@@ -22,6 +22,10 @@ module CurrentUserSchema
       required(:me).schema do
         required(:id).filled(:str?)
         required(:email).filled(:str?)
+        required(:projects).each do
+          required(:id).filled(:str?)
+          required(:title).filled(:str?)
+        end
       end
     end
   end
