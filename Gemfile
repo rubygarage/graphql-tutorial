@@ -11,6 +11,11 @@ gem 'rack-cors'
 gem 'rails'
 gem 'tzinfo-data'
 
+# Trailblazer bundle
+gem 'dry-types'
+gem 'dry-validation', '0.11.1'
+gem 'trailblazer-rails'
+
 group :development, :test do
   gem 'awesome_print'
   gem 'factory_bot_rails'
