@@ -16,6 +16,9 @@ gem 'dry-types'
 gem 'dry-validation', '0.11.1'
 gem 'trailblazer-rails'
 
+# GraphQL server
+gem 'graphql'
+
 group :development, :test do
   gem 'awesome_print'
   gem 'factory_bot_rails'
@@ -32,6 +35,12 @@ group :development do
   gem 'listen'
   gem 'spring'
   gem 'spring-watcher-listen'
+
+  # GraphQL server
+  gem 'coffee-rails'
+  gem 'graphiql-rails'
+  gem 'sass-rails'
+  gem 'uglifier'
 end
 
 group :test do
