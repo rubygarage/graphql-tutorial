@@ -1,0 +1,7 @@
+en:
+  errors:
+    default: Something went wrong
+    rules:
+      user:
+        eql?: Password confirmation doesn't match
+        email_unique?: This email is already registered.

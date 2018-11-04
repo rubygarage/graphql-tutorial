@@ -19,6 +19,9 @@ gem 'trailblazer-rails'
 # GraphQL server
 gem 'graphql'
 
+# Authentification
+gem 'bcrypt'
+
 group :development, :test do
   gem 'awesome_print'
   gem 'factory_bot_rails'

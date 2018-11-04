@@ -54,6 +54,7 @@ GEM
     arel (9.0.0)
     ast (2.4.0)
     awesome_print (1.8.0)
+    bcrypt (3.1.12)
     bootsnap (1.3.2)
       msgpack (~> 1.0)
     brakeman (4.3.1)
@@ -382,6 +383,7 @@ PLATFORMS
 
 DEPENDENCIES
   awesome_print
+  bcrypt
   bootsnap
   bullet
   bundle-audit
