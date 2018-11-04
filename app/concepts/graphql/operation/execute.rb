@@ -17,8 +17,8 @@ class Graphql::Execute < Trailblazer::Operation
     options[:operation_name] = params[:operation_name]
   end
 
-  def context!(options, **)
-    options[:context] = {}
+  def context!(options, current_user:, **)
+    options[:context] = { current_user: current_user }
   end
 
   def model!(options, variables:, query:, context:, **)

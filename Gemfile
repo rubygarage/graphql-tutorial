@@ -19,6 +19,17 @@ gem 'trailblazer-rails'
 # GraphQL server
 gem 'graphql'
 
+# Authentification
+gem 'bcrypt'
+gem 'jwt'
+
+# File uploader
+gem 'apollo_upload_server', '2.0.0.beta.1'
+gem 'carrierwave'
+
+# Authorization
+gem 'pundit'
+
 group :development, :test do
   gem 'awesome_print'
   gem 'factory_bot_rails'
