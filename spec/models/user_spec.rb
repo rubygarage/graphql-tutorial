@@ -6,5 +6,6 @@ RSpec.describe User, type: :model do
 
   context 'relations' do
     it { is_expected.to have_many(:projects) }
+    it { is_expected.to have_many(:tasks).through(:projects) }
   end
 end

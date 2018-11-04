@@ -6,4 +6,8 @@ class MutationType < Lib::Objects::Base
   field :createProject, mutation: Projects::Mutations::Create
   field :updateProject, mutation: Projects::Mutations::Update
   field :destroyProject, mutation: Projects::Mutations::Destroy
+
+  field :createTask, mutation: Tasks::Mutations::Create
+  field :updateTask, mutation: Tasks::Mutations::Update
+  field :destroyTask, mutation: Tasks::Mutations::Destroy
 end
