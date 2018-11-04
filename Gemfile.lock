@@ -226,6 +226,8 @@ GEM
       pry (>= 0.10.4)
     public_suffix (3.0.3)
     puma (3.12.0)
+    pundit (2.0.0)
+      activesupport (>= 3.0.0)
     rack (2.0.5)
     rack-cors (1.0.2)
     rack-test (1.1.0)
@@ -420,6 +422,7 @@ DEPENDENCIES
   pry-byebug
   pry-rails
   puma
+  pundit
   rack-cors
   rails
   rails-controller-testing
