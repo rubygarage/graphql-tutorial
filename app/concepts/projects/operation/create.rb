@@ -5,11 +5,11 @@ class Projects::Create < Trailblazer::Operation
   step Contract::Validate()
   step Contract::Persist()
 
-  def position!(options, current_user:, **)
-    options[:position] = current_user.projects.count
+  def position!(ctx, current_user:, **)
+    ctx[:position] = current_user.projects.count
   end
 
-  def model!(options, current_user:, position:, **)
-    options[:model] = current_user.projects.new(position: position)
+  def model!(ctx, current_user:, position:, **)
+    ctx[:model] = current_user.projects.new(position: position)
   end
 end

@@ -3,7 +3,7 @@ class AuthenticationController < ApplicationController
 
   private
 
-  def _run_options(options)
-    options.merge('current_user' => current_user)
+  def _run_options(ctx)
+    ctx.merge(current_user: current_user)
   end
 end

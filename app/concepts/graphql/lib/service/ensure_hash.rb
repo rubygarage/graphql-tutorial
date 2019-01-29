@@ -5,7 +5,7 @@ module Graphql
         def self.call(ambiguous_param)
           case ambiguous_param
           when String
-            ambiguous_param.present? ? ensure_hash(JSON.parse(ambiguous_param)) : {}
+            ambiguous_param.present? ? call(JSON.parse(ambiguous_param)) : {}
           when Hash, ActionController::Parameters
             ambiguous_param
           when nil

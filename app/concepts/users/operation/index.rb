@@ -1,7 +1,7 @@
 class Users::Index < Trailblazer::Operation
   step :model!
 
-  def model!(options, **)
-    options[:model] = User.all
+  def model!(ctx, **)
+    ctx[:model] = User.all
   end
 end

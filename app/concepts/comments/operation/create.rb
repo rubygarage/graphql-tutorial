@@ -5,11 +5,11 @@ class Comments::Create < Trailblazer::Operation
   step Contract::Validate()
   step Contract::Persist()
 
-  def comment!(options, current_user:, params:, **)
-    options[:task] = current_user.tasks.find(params[:task_id])
+  def comment!(ctx, current_user:, params:, **)
+    ctx[:task] = current_user.tasks.find(params[:task_id])
   end
 
-  def model!(options, task:, **)
-    options[:model] = task.comments.new
+  def model!(ctx, task:, **)
+    ctx[:model] = task.comments.new
   end
 end

@@ -1,7 +1,7 @@
 class Lib::Step::NotAuthorized < Trailblazer::Operation
-  step :restrict_access!
+  extend Uber::Callable
 
-  def restrict_access!(_options, **)
+  def self.call(_ctx, **)
     raise Pundit::NotAuthorizedError
   end
 end

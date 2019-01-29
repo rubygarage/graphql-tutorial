@@ -6,15 +6,15 @@ class Tasks::Create < Trailblazer::Operation
   step Contract::Persist()
   step :update_tasks_positions!
 
-  def project!(options, current_user:, params:, **)
-    options[:project] = current_user.projects.find(params[:project_id])
+  def project!(ctx, current_user:, params:, **)
+    ctx[:project] = current_user.projects.find(params[:project_id])
   end
 
-  def model!(options, project:, **)
-    options[:model] = project.tasks.new
+  def model!(ctx, project:, **)
+    ctx[:model] = project.tasks.new
   end
 
-  def update_tasks_positions!(_options, model:, project:, **)
+  def update_tasks_positions!(_ctx, model:, project:, **)
     project.tasks.where.not(id: model.id).each { |task| task.update(position: task.position + 1) }
   end
 end

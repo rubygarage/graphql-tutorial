@@ -4,7 +4,7 @@ class Tasks::Update < Trailblazer::Operation
   step Contract::Validate()
   step Contract::Persist()
 
-  def model!(options, current_user:, params:, **)
-    options[:model] = current_user.tasks.find(params[:id])
+  def model!(ctx, current_user:, params:, **)
+    ctx[:model] = current_user.tasks.find(params[:id])
   end
 end
