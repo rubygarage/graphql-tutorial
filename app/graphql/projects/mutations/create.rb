@@ -1,5 +1,5 @@
 class Projects::Mutations::Create < Lib::Mutations::WithUserAuthentication
-  graphql_name 'createProject'
+  graphql_name 'projectCreate'
   description 'Create new project'
 
   argument :title, String, required: true

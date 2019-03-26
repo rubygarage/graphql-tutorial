@@ -10,7 +10,7 @@ RSpec.describe GraphqlsController, type: :controller do
     let(:mutation) do
       '
         mutation($id: ID!) {
-          destroyComment(input: {
+          commentDestroy(input: {
             id: $id
           }) {
             errors {

@@ -1,5 +1,5 @@
 class Users::Mutations::Create < Lib::Mutations::Base
-  graphql_name 'createUser'
+  graphql_name 'userCreate'
   description 'Create new user (Sign Up)'
 
   argument :email, String, required: true

@@ -5,7 +5,7 @@ RSpec.describe GraphqlsController, type: :controller do
     let(:mutation) do
       '
         mutation($email: String!, $password: String!, $passwordConfirmation: String!) {
-          createUser(input: {
+          userCreate(input: {
             email: $email,
             password: $password,
             passwordConfirmation: $passwordConfirmation

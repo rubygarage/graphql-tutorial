@@ -7,7 +7,7 @@ RSpec.describe GraphqlsController, type: :controller do
     let(:mutation) do
       '
         mutation($title: String!) {
-          createProject(input: {
+          projectCreate(input: {
             title: $title
           }) {
             project {

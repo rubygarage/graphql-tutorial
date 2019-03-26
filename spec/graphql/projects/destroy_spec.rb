@@ -8,7 +8,7 @@ RSpec.describe GraphqlsController, type: :controller do
     let(:mutation) do
       '
         mutation($id: ID!) {
-          destroyProject(input: {
+          projectDestroy(input: {
             id: $id
           }) {
             errors {

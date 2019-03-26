@@ -1,5 +1,5 @@
 class Projects::Mutations::Update < Lib::Mutations::WithUserAuthentication
-  graphql_name 'updateProject'
+  graphql_name 'projectUpdate'
   description 'Update project'
 
   argument :id, ID, required: true

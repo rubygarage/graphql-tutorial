@@ -3,7 +3,7 @@ module CreateTaskSchema
     input :hash?, :strict_keys?
 
     required(:data).schema do
-      required(:createTask).value(:none?)
+      required(:taskCreate).value(:none?)
     end
     required(:errors).each do
       schema do
@@ -21,7 +21,7 @@ module CreateTaskSchema
     input :hash?, :strict_keys?
 
     required(:data).schema do
-      required(:createTask).value(:none?)
+      required(:taskCreate).value(:none?)
     end
     required(:errors).each do
       schema do
@@ -39,7 +39,7 @@ module CreateTaskSchema
     input :hash?, :strict_keys?
 
     required(:data).schema do
-      required(:createTask).schema do
+      required(:taskCreate).schema do
         required(:task).value(:none?)
         required(:errors).each do
           schema do
@@ -55,7 +55,7 @@ module CreateTaskSchema
     input :hash?, :strict_keys?
 
     required(:data).schema do
-      required(:createTask).schema do
+      required(:taskCreate).schema do
         required(:task).schema do
           required(:id).filled(:str?)
           required(:name).filled(:str?)

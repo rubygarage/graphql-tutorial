@@ -3,7 +3,7 @@ module CreateSessionSchema
     input :hash?, :strict_keys?
 
     required(:data).schema do
-      required(:createSession).value(:none?)
+      required(:sessionCreate).value(:none?)
     end
     required(:errors).each do
       schema do
@@ -21,7 +21,7 @@ module CreateSessionSchema
     input :hash?, :strict_keys?
 
     required(:data).schema do
-      required(:createSession).value(:none?)
+      required(:sessionCreate).value(:none?)
     end
     required(:errors).each do
       schema do
@@ -39,7 +39,7 @@ module CreateSessionSchema
     input :hash?, :strict_keys?
 
     required(:data).schema do
-      required(:createSession).schema do
+      required(:sessionCreate).schema do
         required(:user).schema do
           required(:id).filled(:str?)
           required(:email).filled(:str?)

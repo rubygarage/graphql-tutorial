@@ -3,7 +3,7 @@ module CreateProjectSchema
     input :hash?, :strict_keys?
 
     required(:data).schema do
-      required(:createProject).value(:none?)
+      required(:projectCreate).value(:none?)
     end
     required(:errors).each do
       schema do
@@ -21,7 +21,7 @@ module CreateProjectSchema
     input :hash?, :strict_keys?
 
     required(:data).schema do
-      required(:createProject).schema do
+      required(:projectCreate).schema do
         required(:project).value(:none?)
         required(:errors).each do
           schema do
@@ -37,7 +37,7 @@ module CreateProjectSchema
     input :hash?, :strict_keys?
 
     required(:data).schema do
-      required(:createProject).schema do
+      required(:projectCreate).schema do
         required(:project).schema do
           required(:id).filled(:str?)
           required(:title).filled(:str?)

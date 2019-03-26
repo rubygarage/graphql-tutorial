@@ -1,5 +1,5 @@
 class Tasks::Mutations::Update < Lib::Mutations::WithUserAuthentication
-  graphql_name 'updateTask'
+  graphql_name 'taskUpdate'
   description 'Update task'
 
   argument :id, ID, required: true

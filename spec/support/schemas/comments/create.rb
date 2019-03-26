@@ -3,7 +3,7 @@ module CreateCommentSchema
     input :hash?, :strict_keys?
 
     required(:data).schema do
-      required(:createComment).value(:none?)
+      required(:commentCreate).value(:none?)
     end
     required(:errors).each do
       schema do
@@ -21,7 +21,7 @@ module CreateCommentSchema
     input :hash?, :strict_keys?
 
     required(:data).schema do
-      required(:createComment).value(:none?)
+      required(:commentCreate).value(:none?)
     end
     required(:errors).each do
       schema do
@@ -39,7 +39,7 @@ module CreateCommentSchema
     input :hash?, :strict_keys?
 
     required(:data).schema do
-      required(:createComment).schema do
+      required(:commentCreate).schema do
         required(:comment).value(:none?)
         required(:errors).each do
           schema do
@@ -55,7 +55,7 @@ module CreateCommentSchema
     input :hash?, :strict_keys?
 
     required(:data).schema do
-      required(:createComment).schema do
+      required(:commentCreate).schema do
         required(:comment).schema do
           required(:id).filled(:str?)
           required(:body).filled(:str?)

@@ -1,5 +1,5 @@
 class Projects::Mutations::Destroy < Lib::Mutations::WithUserAuthentication
-  graphql_name 'destroyProject'
+  graphql_name 'projectDestroy'
   description 'Delete project'
 
   argument :id, ID, required: true

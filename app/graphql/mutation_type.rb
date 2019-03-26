@@ -1,16 +1,16 @@
 class MutationType < Lib::Objects::Base
-  field :createUser, mutation: Users::Mutations::Create
+  field :userCreate, mutation: Users::Mutations::Create
 
-  field :createSession, mutation: Sessions::Mutations::Create
+  field :sessionCreate, mutation: Sessions::Mutations::Create
 
-  field :createProject, mutation: Projects::Mutations::Create
-  field :updateProject, mutation: Projects::Mutations::Update
-  field :destroyProject, mutation: Projects::Mutations::Destroy
+  field :projectCreate, mutation: Projects::Mutations::Create
+  field :projectUpdate, mutation: Projects::Mutations::Update
+  field :projectDestroy, mutation: Projects::Mutations::Destroy
 
-  field :createTask, mutation: Tasks::Mutations::Create
-  field :updateTask, mutation: Tasks::Mutations::Update
-  field :destroyTask, mutation: Tasks::Mutations::Destroy
+  field :taskCreate, mutation: Tasks::Mutations::Create
+  field :taskUpdate, mutation: Tasks::Mutations::Update
+  field :taskDestroy, mutation: Tasks::Mutations::Destroy
 
-  field :createComment, mutation: Comments::Mutations::Create
-  field :destroyComment, mutation: Comments::Mutations::Destroy
+  field :commentCreate, mutation: Comments::Mutations::Create
+  field :commentDestroy, mutation: Comments::Mutations::Destroy
 end

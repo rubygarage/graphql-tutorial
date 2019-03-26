@@ -3,7 +3,7 @@ module UpdateTaskSchema
     input :hash?, :strict_keys?
 
     required(:data).schema do
-      required(:updateTask).value(:none?)
+      required(:taskUpdate).value(:none?)
     end
     required(:errors).each do
       schema do
@@ -21,7 +21,7 @@ module UpdateTaskSchema
     input :hash?, :strict_keys?
 
     required(:data).schema do
-      required(:updateTask).value(:none?)
+      required(:taskUpdate).value(:none?)
     end
     required(:errors).each do
       schema do
@@ -39,7 +39,7 @@ module UpdateTaskSchema
     input :hash?, :strict_keys?
 
     required(:data).schema do
-      required(:updateTask).schema do
+      required(:taskUpdate).schema do
         required(:task).value(:none?)
         required(:errors).each do
           schema do
@@ -55,7 +55,7 @@ module UpdateTaskSchema
     input :hash?, :strict_keys?
 
     required(:data).schema do
-      required(:updateTask).schema do
+      required(:taskUpdate).schema do
         required(:task).schema do
           required(:id).filled(:str?)
           required(:name).filled(:str?)

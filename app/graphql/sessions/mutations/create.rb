@@ -1,5 +1,5 @@
 class Sessions::Mutations::Create < Lib::Mutations::Base
-  graphql_name 'createSession'
+  graphql_name 'sessionCreate'
   description 'Sign In'
 
   argument :email, String, required: true

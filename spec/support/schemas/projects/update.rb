@@ -3,7 +3,7 @@ module UpdateProjectSchema
     input :hash?, :strict_keys?
 
     required(:data).schema do
-      required(:updateProject).value(:none?)
+      required(:projectUpdate).value(:none?)
     end
     required(:errors).each do
       schema do
@@ -21,7 +21,7 @@ module UpdateProjectSchema
     input :hash?, :strict_keys?
 
     required(:data).schema do
-      required(:updateProject).value(:none?)
+      required(:projectUpdate).value(:none?)
     end
     required(:errors).each do
       schema do
@@ -39,7 +39,7 @@ module UpdateProjectSchema
     input :hash?, :strict_keys?
 
     required(:data).schema do
-      required(:updateProject).schema do
+      required(:projectUpdate).schema do
         required(:project).value(:none?)
         required(:errors).each do
           schema do
@@ -55,7 +55,7 @@ module UpdateProjectSchema
     input :hash?, :strict_keys?
 
     required(:data).schema do
-      required(:updateProject).schema do
+      required(:projectUpdate).schema do
         required(:project).schema do
           required(:id).filled(:str?)
           required(:title).filled(:str?)

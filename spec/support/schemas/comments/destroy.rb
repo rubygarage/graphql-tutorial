@@ -3,7 +3,7 @@ module DestroyCommentSchema
     input :hash?, :strict_keys?
 
     required(:data).schema do
-      required(:destroyComment).value(:none?)
+      required(:commentDestroy).value(:none?)
     end
     required(:errors).each do
       schema do
@@ -21,7 +21,7 @@ module DestroyCommentSchema
     input :hash?, :strict_keys?
 
     required(:data).schema do
-      required(:destroyComment).value(:none?)
+      required(:commentDestroy).value(:none?)
     end
     required(:errors).each do
       schema do
@@ -39,7 +39,7 @@ module DestroyCommentSchema
     input :hash?, :strict_keys?
 
     required(:data).schema do
-      required(:destroyComment).schema do
+      required(:commentDestroy).schema do
         required(:errors).value(type?: Array).value(:empty?)
       end
     end

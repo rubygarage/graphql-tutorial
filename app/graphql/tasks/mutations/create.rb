@@ -1,5 +1,5 @@
 class Tasks::Mutations::Create < Lib::Mutations::WithUserAuthentication
-  graphql_name 'createTask'
+  graphql_name 'taskCreate'
   description 'Create new task'
 
   argument :project_id, ID, required: true

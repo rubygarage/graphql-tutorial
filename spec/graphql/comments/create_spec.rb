@@ -9,7 +9,7 @@ RSpec.describe GraphqlsController, type: :controller do
     let(:mutation) do
       '
         mutation($taskId: ID!, $body: String!, $attachment: Upload) {
-          createComment(input: {
+          commentCreate(input: {
             body: $body,
             taskId: $taskId,
             attachment: $attachment

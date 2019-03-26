@@ -3,7 +3,7 @@ module CreateUserSchema
     input :hash?, :strict_keys?
 
     required(:data).schema do
-      required(:createUser).schema do
+      required(:userCreate).schema do
         required(:user).value(:none?)
         required(:errors).each do
           schema do
@@ -19,7 +19,7 @@ module CreateUserSchema
     input :hash?, :strict_keys?
 
     required(:data).schema do
-      required(:createUser).schema do
+      required(:userCreate).schema do
         required(:user).schema do
           required(:id).filled(:str?)
           required(:email).filled(:str?)

@@ -3,7 +3,7 @@ module DestroyTaskSchema
     input :hash?, :strict_keys?
 
     required(:data).schema do
-      required(:destroyTask).value(:none?)
+      required(:taskDestroy).value(:none?)
     end
     required(:errors).each do
       schema do
@@ -21,7 +21,7 @@ module DestroyTaskSchema
     input :hash?, :strict_keys?
 
     required(:data).schema do
-      required(:destroyTask).value(:none?)
+      required(:taskDestroy).value(:none?)
     end
     required(:errors).each do
       schema do
@@ -39,7 +39,7 @@ module DestroyTaskSchema
     input :hash?, :strict_keys?
 
     required(:data).schema do
-      required(:destroyTask).schema do
+      required(:taskDestroy).schema do
         required(:errors).value(type?: Array).value(:empty?)
       end
     end

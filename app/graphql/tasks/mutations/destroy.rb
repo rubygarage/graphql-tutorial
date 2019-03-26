@@ -1,5 +1,5 @@
 class Tasks::Mutations::Destroy < Lib::Mutations::WithUserAuthentication
-  graphql_name 'destroyTask'
+  graphql_name 'taskDestroy'
   description 'Delete task'
 
   argument :id, ID, required: true

@@ -3,7 +3,7 @@ module DestroyProjectSchema
     input :hash?, :strict_keys?
 
     required(:data).schema do
-      required(:destroyProject).value(:none?)
+      required(:projectDestroy).value(:none?)
     end
     required(:errors).each do
       schema do
@@ -21,7 +21,7 @@ module DestroyProjectSchema
     input :hash?, :strict_keys?
 
     required(:data).schema do
-      required(:destroyProject).value(:none?)
+      required(:projectDestroy).value(:none?)
     end
     required(:errors).each do
       schema do
@@ -39,7 +39,7 @@ module DestroyProjectSchema
     input :hash?, :strict_keys?
 
     required(:data).schema do
-      required(:destroyProject).schema do
+      required(:projectDestroy).schema do
         required(:errors).value(type?: Array).value(:empty?)
       end
     end
