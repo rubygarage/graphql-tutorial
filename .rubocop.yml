@@ -1,0 +1,45 @@
+AllCops:
+  Exclude:
+    - 'bin/**/*'
+    - 'db/**/*'
+    - 'vendor/**/*'
+    - 'spec/fixtures/**/*'
+    - 'tmp/**/*'
+  TargetRubyVersion: 2.3.5
+
+Rails:
+  Enabled: true
+
+Naming/UncommunicativeMethodParamName:
+  AllowedNames:
+    - '' # https://github.com/bbatsov/rubocop/issues/5627
+
+Naming/UncommunicativeBlockParamName:
+  AllowedNames:
+    - '' # https://github.com/bbatsov/rubocop/issues/5627
+
+FrozenStringLiteralComment:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 120
+  Exclude:
+    - 'Rakefile'
+    - '**/*.rake'
+    - 'spec/**/*.rb'
+    - 'config/routes.rb'
+
+Metrics/BlockLength:
+  Exclude:
+    - 'config/**/*.rb'
+    - 'app/concepts/**/contract/*.rb'
+    - 'Rakefile'
+    - '**/*.rake'
+    - 'spec/**/*.rb'
+    - 'config/routes.rb'
