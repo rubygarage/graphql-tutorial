@@ -1,24 +1,59 @@
-# README
+# TODO list with Trailblazer and GraphQL
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A Simple Example on How to Build an API App Based on Trailblazer and GraphQL.
 
-Things you may want to cover:
+The related article is located by [link](https://rubygarage.org/blog/graphql-and-trailblazer-tutorial/).
 
-* Ruby version
+## Getting Started
 
-* System dependencies
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-* Configuration
+### Installing
 
-* Database creation
+Clone the repo:
+```
+git clone git@github.com:rubygarage/graphql-tutorial.git
+```
 
-* Database initialization
+Install bundler
+```
+gem install bundler
+```
 
-* How to run the test suite
+Run bundle in project directory
+```
+bundle install
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+Create database
 
-* Deployment instructions
+```
+rails db:create
+rails db:migrate
 
-* ...
+# or just rails db:setup
+```
+
+Run Server
+```
+rails s
+```
+
+### Running the tests
+
+```
+rspec
+```
+
+## FAQ
+
+### Where is IDE for exploring GraphQL?
+
+The in-browser IDE for exploring GraphQL is available from within app (under the http://localohost:3000/graphiql path)
+
+## Built With
+
+* [Rails](http://guides.rubyonrails.org/v5.2/) - The web framework used
+* [Bundler](http://bundler.io/) - Dependency Management
+* [Trailblazer](http://trailblazer.to/blog/2017-12-trailblazer-2-1-what-you-need-to-know.html/) - A gem for creating a high-level architecture in an application
+* [GraphQL](https://graphql-ruby.org//) - A query language for getting data and declaring its structure
