@@ -35,7 +35,7 @@ RSpec.describe Sessions::Create do
 
   context 'success' do
     let(:jwt_params) { { aud: 'user_auth', sub: user.id, exp: be_kind_of(Integer) } }
-    let(:secret) { Rails.application.credentials.secret_key_base }
+    let(:secret) { Rails.application.secret_key_base }
 
     context 'valid params for existing user' do
       let(:user) { create(:user) }

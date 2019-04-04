@@ -16,6 +16,6 @@ class Sessions::Create < Trailblazer::Operation
 
   def create_token!(ctx, model:, **)
     payload = { aud: 'user_auth', sub: model.id, exp: (Time.zone.now + 1.day).to_i }
-    ctx[:token] = JWT.encode(payload, Rails.application.credentials.secret_key_base)
+    ctx[:token] = JWT.encode(payload, Rails.application.secret_key_base)
   end
 end
